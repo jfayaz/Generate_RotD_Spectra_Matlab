@@ -1,7 +1,7 @@
-clear all; clc; close all; fclose all; direc = pwd;
+clear; clc; close all; fclose all; direc = pwd;
 %% ------------------------------------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% author : JAWAD FAYAZ (email: jfayaz@uci.edu), Sarah Azar, Nicholas Luco
+% author : JAWAD FAYAZ (email: j.fayaz@exeter.ac.edu), Sarah Azar, Nicholas Luco
 % visit: (https://jfayaz.github.io)
 
 % ------------------------------ Instructions ------------------------------------- 
@@ -38,12 +38,12 @@ clear all; clc; close all; fclose all; direc = pwd;
 
 % For periods 0 to 'End_T_Reg_1' in an interval of 'Int_T_Reg_1' 
 % (Note interval must not be less than 2 decimal points, which means min 'Int_T_Reg_1' = 0.01
-Int_T_Reg_1   = 0.05;
+Int_T_Reg_1   = 0.1;
 End_T_Reg_1   = 1;
 
 % For periods ['End_T_Reg_1'+'Int_T_Reg_2'] to 'End_T_Reg_2' in an interval of 'Int_T_Reg_2'
 % (Note interval must not be less than 2 decimal points, which means min 'Int_T_Reg_2' = 0.01
-Int_T_Reg_2   = 0.1;
+Int_T_Reg_2   = 0.2;
 End_T_Reg_2   = 2;
 
 % For periods ['End_T_Reg_2'+'Int_T_Reg_3'] to 'End_T_Reg_3' in an interval of 'Int_T_Reg_3'
@@ -60,7 +60,7 @@ Plot_Spectra  = 'Yes';
 %%%%%%================= END OF USER INPUT ========================%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% =============== Generation of Spectra ================
-T1 = [Int_T_Reg_1:Int_T_Reg_1:End_T_Reg_1];
+T1 = [0:Int_T_Reg_1:End_T_Reg_1];
 T2 = [End_T_Reg_1+Int_T_Reg_2:Int_T_Reg_2:End_T_Reg_2];
 T3 = [End_T_Reg_2+Int_T_Reg_3:Int_T_Reg_3:End_T_Reg_3];
 Tn = [T1 T2 T3]';  
